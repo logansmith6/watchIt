@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-class addUser extends Component {
+class AddUser extends Component {
     state = {
         name: '',
         email: '',
@@ -9,26 +9,33 @@ class addUser extends Component {
     }
 
     handleOnChange = event => {
-        if (event.target.name === 'content'){
+        
           this.setState({
-            ...this.state,
-            content: event.target.value
+            
+            email: event.target.value
           })
-        } else {
-          this.setState({
-            ...this.state,
-            author: event.target.value
-          })
-        }
-      }
+      };
+
+      handleOnSubmit = event =>  {
+        event.preventDefault();
+        this.setState({
+          email: ''
+        })
+    };
 
     render() {
         return (
           <div className="container">
-            <form>
-                <textarea />
+            <form onSubmit={this.handleOnSubmit} className="form-horizontal">
+                <label>Email:</label>
+                <textarea name="email" onChange={this.handleOnChange} value={this.state.email}/>
+                   
+                <button type="submit" className="btn btn-default">Add</button>
+                
             </form>
           </div>
         );
       }
 }
+
+export default AddUser;
