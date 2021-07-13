@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import AddUser from './components/Users/AddUser';
+import Login from './components/Users/Login';
 
 
 
@@ -11,7 +11,7 @@ class App extends Component {
   return (
     <div className="App">
       <h1>Sign Up</h1>
-      <AddUser />
+       <Login />
     </div>
   );
  }
