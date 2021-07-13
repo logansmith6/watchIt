@@ -14,6 +14,8 @@ class App extends Component {
     
   return (
     <div className="App">
+      <section class="header">
+      </section>
       <img className="main-logo"src="https://i.imgur.com/WYhzzOk.png"/>
        <Login />
        <Logout />

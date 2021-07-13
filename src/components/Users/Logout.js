@@ -6,9 +6,9 @@ const Logout = () => {
     
 
 return (
-    
+    //conditionally includes an element
     isAuthenticated && (
-        <button onClick={() => logout()}>
+        <button class="btn info"onClick={() => logout()}>
         Log Out
         </button>
     
