@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Login from './components/Users/Login';
 import Logout from './components/Users/Logout'
 import UserProfile from './components/Users/UserProfile'
-import { useAuth0 } from '@auth0/auth0-react'
+
 import './App.css';
 
 
@@ -21,7 +21,7 @@ class App extends Component {
           <input type="text" placeholder="Search.." name="search"/>
           <button type="submit"><i class="fa fa-search"></i></button>
         </form>
-        <img className="main-logo"src="https://i.imgur.com/WYhzzOk.png"/>
+        <a href='/'><img className="main-logo"src="https://i.imgur.com/WYhzzOk.png"/></a>
         
        <Login />
        <Logout />
