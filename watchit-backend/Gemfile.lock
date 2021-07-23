@@ -60,8 +60,6 @@ GEM
     babel-transpiler (0.7.0)
       babel-source (>= 4.0, < 6)
       execjs (~> 2.0)
-    bcrypt (3.1.16)
-    bcrypt (3.1.16-java)
     bootsnap (1.7.5)
       msgpack (~> 1.0)
     builder (3.2.4)
@@ -195,7 +193,6 @@ PLATFORMS
   x86-mswin32
 
 DEPENDENCIES
-  bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.2)
   byebug
   listen (~> 3.2)
