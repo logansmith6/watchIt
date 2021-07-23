@@ -7,6 +7,6 @@ export const fetchUsers = () => {
         //jsonifying will return another promise, will resolve with second .then which will return users
         fetch('http://127.0.0.1:8000/users')
         .then(resp => resp.json())
-        .then(users => console.log('fetchUsers', users))
+        .then(users => dispatch({ type: 'FETCH_USERS', payload: users}))
     }
 }
