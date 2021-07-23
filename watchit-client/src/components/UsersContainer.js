@@ -2,17 +2,22 @@
 
 import React, { Component } from 'react';
 //connect will allow use of actions
-import { connect } from 'redux'
+import { connect } from 'react-redux'
 import { fetchUsers } from '../actions/usersActions'
 class UsersContainer extends Component {
+
+    componentDidMount() {
+        this.props.fetchUsers()
+    }
+    
     render() {
         return (
             <div>
-
+                Users Container
             </div>
-        )
+        );
     }
 }
 
-export default connect(null, { fetchUsers }(UsersContainer));
+export default connect(null, { fetchUsers })(UsersContainer);
 //this makes fetchUsers available to the container as a prop
