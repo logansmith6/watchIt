@@ -18,7 +18,7 @@ class UsersForm extends Component {
     }
     render() {
         return (
-            <form>
+            <form onSubmit={this.handleSubmit}>
                 <label>Username:</label>
                 <input type='text' value={this.state.username} onChange={this.handleChange} name='username'/>
                     <br />
