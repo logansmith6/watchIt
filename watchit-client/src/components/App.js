@@ -1,16 +1,11 @@
-import React, { Component } from 'react';
-import './App.css';
+import React from 'react';
 
 
-class App extends Component {
-  
-  
-  
-  render() {
-    
-  return (
-    <div className="App">
-      <section class="header">
+
+const App = () => {
+    return (
+        <div className="App">
+        
       
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
         <form class="example" action="action_page.php">
@@ -19,12 +14,11 @@ class App extends Component {
         </form>
         <a href='/'><img className="main-logo"src="https://i.imgur.com/WYhzzOk.png"/></a>
         
-       <
-      </section>
+       
+      
       
     </div>
-  );
- }
+    )
 }
 
 export default App;
