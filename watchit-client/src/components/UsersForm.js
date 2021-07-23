@@ -8,6 +8,14 @@ class UsersForm extends Component {
         password: ''
 
     }
+
+    handleChange = event => {
+        const {name, value} = event.target
+
+        this.setState({
+            [name]: value
+        })
+    }
     render() {
         return (
             <form>
