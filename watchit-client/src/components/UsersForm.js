@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { addUser } from '../actions/usersActions';
 
 class UsersForm extends Component {
 
@@ -16,6 +18,11 @@ class UsersForm extends Component {
             [name]: value
         })
     }
+
+    handleSubmit = event => {
+        event.preventDefault()
+        this.props.addUser(this.state)
+    }
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
@@ -28,9 +35,10 @@ class UsersForm extends Component {
                 <label>Password:</label>
                 <input type='text' value={this.state.password} onChange={this.handleChange} name='password'/>
                     <br />
+                <input type="submit" value="Create Account"/>
             </form>
         )
     }
 }
 
-export default UsersForm;
+export default connect(null, {addUser})(UsersForm);
