@@ -2,13 +2,13 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import UsersContainer from './UsersContainer';
-import HomePage from '../components/HomePage'
+//import HomePage from '../components/HomePage'
 
 const Router = () => {
     return (
-        <div>
-
-        </div>
+        <Switch>
+            <Route exact path='/users' component={UsersContainer} />
+        </Switch>
     )
 }
 
