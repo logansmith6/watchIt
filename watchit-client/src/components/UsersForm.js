@@ -11,7 +11,15 @@ class UsersForm extends Component {
     render() {
         return (
             <form>
-                <input type='text' value={this.state.name} onChange={this.handleChange} name='name'/>
+                <label>Username:</label>
+                <input type='text' value={this.state.username} onChange={this.handleChange} name='username'/>
+                    <br />
+                <label>Email:</label>
+                <input type='text' value={this.state.email} onChange={this.handleChange} name='email'/>
+                    <br />
+                <label>Password:</label>
+                <input type='text' value={this.state.password} onChange={this.handleChange} name='password'/>
+                    <br />
             </form>
         )
     }

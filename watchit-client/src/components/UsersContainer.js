@@ -4,6 +4,8 @@ import React, { Component } from 'react';
 //connect will allow use of actions
 import { connect } from 'react-redux'
 import { fetchUsers } from '../actions/usersActions'
+import UsersForm from './UsersForm'
+
 class UsersContainer extends Component {
 
     componentDidMount() {
@@ -14,6 +16,7 @@ class UsersContainer extends Component {
         return (
             <div>
                 Users Container
+                <UsersForm />
             </div>
         );
     }
