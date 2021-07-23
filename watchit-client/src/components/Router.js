@@ -8,6 +8,7 @@ const Router = () => {
     return (
         <Switch>
             <Route exact path='/users' component={UsersContainer} />
+            <Route exact path='/users' component={UsersContainer} />
         </Switch>
     )
 }
