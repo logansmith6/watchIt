@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import Login from './components/Users/Login';
-import Logout from './components/Users/Logout'
-import UserProfile from './components/Users/UserProfile'
+
 
 import './App.css';
 
@@ -23,9 +21,7 @@ class App extends Component {
         </form>
         <a href='/'><img className="main-logo"src="https://i.imgur.com/WYhzzOk.png"/></a>
         
-       <Login />
-       <Logout />
-       <UserProfile />
+       <
       </section>
       
     </div>
