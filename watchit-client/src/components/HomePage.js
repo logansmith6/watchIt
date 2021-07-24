@@ -5,7 +5,7 @@ import ReactPlayer from 'react-player';
 const HomePage = ({posts}) => {
     return (
         <div>
-            {posts.map(post => <ul><li key={post.id}>{post.title} {post.description} <ReactPlayer url={post.video} /> </li></ul>)}
+            {posts.map(post => <ul><li key={post.id}>{post.title} {post.description} <video width='640' height='264' src={'file:///' + post.video}></video> </li></ul>)}
         </div>
     )
 }

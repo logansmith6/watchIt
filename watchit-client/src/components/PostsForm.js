@@ -10,7 +10,7 @@ class PostsForm extends Component {
     state = {
         title: '',
         description: '',
-        video: null
+        clip: null
 
 
     }
@@ -48,7 +48,7 @@ class PostsForm extends Component {
                         {({getRootProps, getInputProps}) => (
                 <section>
                     <div {...getRootProps()}>
-                    <input {...getInputProps()} value={this.state.acceptedFiles} onChange={this.handleChange} name='video'/>
+                    <input {...getInputProps()} value={this.state.acceptedFiles} onChange={this.handleChange} name='clip'/>
                     <p>Drag 'n' drop some files here, or click to select files</p>
                     </div>
                     </section>
