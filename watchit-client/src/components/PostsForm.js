@@ -11,8 +11,6 @@ class PostsForm extends Component {
         title: '',
         description: '',
         video: ''
-
-
     }
 
    
@@ -28,7 +26,10 @@ class PostsForm extends Component {
 
     handleSubmit = event => {
         event.preventDefault()
-        this.state.video = event.target.elements.video.value
+        this.setState({
+            video: event.target.elements.video.value
+        })
+         
         
         this.props.addPost(this.state)
         window.location.reload(true);
