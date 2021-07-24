@@ -10,7 +10,7 @@ const Login = () => {
     
 
     return (
-        <div className='login'><h1>Login</h1>
+        <div className='login'><h1 className="login-command">Login</h1>
             <form className='login__form'>
                 <input 
                 type='name' 
@@ -34,7 +34,9 @@ const Login = () => {
                 />
                 <input 
                 type="submit" 
-                value="Login"/>
+                value="Login"
+                className="submit__btn"
+                />
                 
             </form>
         </div>
