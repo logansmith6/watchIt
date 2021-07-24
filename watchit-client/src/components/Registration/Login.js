@@ -2,13 +2,7 @@ import React, { useState } from 'react';
 import './Login.css'
 
 const Login = () => {
-    const [name, setName] = useState("")
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
-
-
     
-
     return (
         <div className='login'><h1 className="login-command">Login</h1>
             <form className='login__form'>
@@ -23,14 +17,14 @@ const Login = () => {
                 type='email' 
                 placeholder='Email' 
                 value={email} 
-                onChange={(e) => setName(e.target.value)}
+                onChange={(e) => setEmail(e.target.value)}
                 />
                 <br/>
                 <input 
                 type='password' 
                 placeholder='Password' 
                 value={password} 
-                onChange={(e) => setName(e.target.value)}
+                onChange={(e) => setPassword(e.target.value)}
                 />
                 <input 
                 type="submit" 
