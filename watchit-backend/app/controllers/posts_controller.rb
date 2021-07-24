@@ -24,6 +24,8 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     
     if @post.save
+      video = Cloudinary::Uploader.upload(params[:video], :resource_type => :video)
+      @post.clip = video
       render json: @post, status: :created, location: @post
     else
       render json: @post.errors, status: :unprocessable_entity
