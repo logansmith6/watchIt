@@ -36,16 +36,7 @@ ActiveRecord::Schema.define(version: 2021_07_24_020153) do
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.string "description"
-    t.integer "userid"
     t.string "video"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "email"
-    t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

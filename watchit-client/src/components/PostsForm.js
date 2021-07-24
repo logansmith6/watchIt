@@ -26,10 +26,7 @@ class PostsForm extends Component {
 
     handleSubmit = event => {
         event.preventDefault()
-        this.setState({
-            video: event.target.elements.video.value
-        })
-         
+        this.state.video = event.target.elements.video.value
         
         this.props.addPost(this.state)
         window.location.reload(true);
