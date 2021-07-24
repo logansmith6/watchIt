@@ -22,4 +22,21 @@ export const addUser = user => {
         .then(user => dispatch({ type: 'ADD_USER', payload: user}))
     }
 }
+
+
+export const youUp = user => {
+    return (dispatch) => {
+        fetch('http://127.0.0.1:3001/logged_in', {
+            'credentials': 'include',
+            })
+        .then(resp => {
+            if (resp.formData.logged_in) {
+                this.handleLogin(resp)
+            } else {
+                this.handleLogout()
+            }
+        })
+        .catch(error => console.log('api errors:', error))
+    }
+}
     
