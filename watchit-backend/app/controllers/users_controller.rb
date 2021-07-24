@@ -10,7 +10,17 @@ class UsersController < ApplicationController
 
   # GET /users/1
   def show
-    render json: @user
+    @user = User.find(params[:id])
+   if @user
+      render json: {
+        user: @user
+      }
+    else
+      render json: {
+        status: 500,
+        errors: ['user not found']
+      }
+    end
   end
 
   # POST /users
@@ -18,7 +28,11 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      render json: @user, status: :created, location: @user
+      login!
+      render json: {
+        status: :created,
+        user: @user
+      }
     else
       render json: @user.errors, status: :unprocessable_entity
     end
@@ -46,6 +60,6 @@ class UsersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def user_params
-      params.require(:user).permit(:username, :email, :password)
+      params.require(:user).permit(:username, :email, :password, :password_confirmation)
     end
 end
