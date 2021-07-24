@@ -31,7 +31,7 @@ class PostsForm extends Component {
         this.state.video = event.target.elements.video.value
         
         this.props.addPost(this.state)
-        
+        window.location.reload(true);
     }
 
     

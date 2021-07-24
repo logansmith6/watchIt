@@ -1,12 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
+import './App';
 
 
 const HomePage = ({posts}) => {
     return (
-        <div>
-            {posts.map(post => <ul><li key={post.id}>{post.title} {post.description} <video width='640' height='264' src={post.video} controls></video> </li></ul>)}
+        <div class="browse">
+            {posts.map(post => 
+                <ul>
+                    <a className="post-title" key={post.id}> 
+                        <video width='320' height='180' src={post.video} controls></video>
+                        <br/>
+                        {post.title} {post.description} 
+                    </a>
+                </ul>)}
         </div>
     )
 }
