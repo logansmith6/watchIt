@@ -9,7 +9,7 @@ export const fetchPosts = () => {
     }
 }
 
-export const addPost = post => {
+export const addPost = (post) => {
     return (dispatch) => {
         fetch('http://127.0.0.1:3001/posts', {
         method: 'POST',

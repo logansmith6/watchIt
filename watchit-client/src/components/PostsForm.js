@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addPost } from '../actions/postsActions';
-import Dropzone from 'react-dropzone'
+
 
 
 
@@ -10,10 +10,13 @@ class PostsForm extends Component {
     state = {
         title: '',
         description: '',
-        clip: null
+        video: null
 
 
     }
+
+   
+    
 
     handleChange = event => {
         const {name, value} = event.target
@@ -25,6 +28,7 @@ class PostsForm extends Component {
 
     handleSubmit = event => {
         event.preventDefault()
+        
         
         this.props.addPost(this.state)
         
@@ -44,16 +48,16 @@ class PostsForm extends Component {
                 <label>Description:</label>
                 <input type='text' value={this.state.description} onChange={this.handleChange} name='description'/>
                     <br />
-                    <Dropzone onDrop={acceptedFiles => console.log(acceptedFiles)}>
-                        {({getRootProps, getInputProps}) => (
-                <section>
-                    <div {...getRootProps()}>
-                    <input {...getInputProps()} value={this.state.acceptedFiles} onChange={this.handleChange} name='clip'/>
-                    <p>Drag 'n' drop some files here, or click to select files</p>
-                    </div>
-                    </section>
-                        )}
-                    </Dropzone>
+                    <input
+                        value={this.state.video}
+                        onChange={this.handleChange}
+                        id='playback'
+                        type="hidden"
+                        role="uploadcare-uploader"
+                        data-public-key="50a37a21db13d5dd4bd7"
+                        name="my_file_input" 
+                        
+                        />
                     <br />
                     
                 <input type="submit" value="Post Video"/>
