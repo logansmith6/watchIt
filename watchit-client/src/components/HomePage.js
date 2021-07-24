@@ -6,6 +6,7 @@ import './App';
 const HomePage = ({posts}) => {
     return (
         <div class="browse">
+            
             {posts.map(post => 
                 <ul>
                     <a className="post-title" key={post.id}> 
