@@ -7,3 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create(username: 'logansmith', email: 'logsmith06@gmail.com', password: 'abc123')
+Post.create(title: 'titanic', description: 'ok movie', video: 'C:\Users\logan\Downloads\Lou Clip - Pixar Short Film.mp4')

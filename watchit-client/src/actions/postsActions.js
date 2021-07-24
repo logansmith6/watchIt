@@ -3,7 +3,7 @@ export const fetchPosts = () => {
     return (dispatch) => {
         //resolve promise from fetch request by jsonifying it. 
         //jsonifying will return another promise, will resolve with second .then which will return users
-        fetch('http://127.0.0.1:3001/posts')
+        fetch("http://127.0.0.1:3001/posts")
         .then(resp => resp.json())
         .then(posts => dispatch({ type: 'FETCH_POSTS', payload: posts}))
     }

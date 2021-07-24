@@ -35,7 +35,6 @@ class UsersForm extends Component {
                 <label>Password:</label>
                 <input type='text' value={this.state.password} onChange={this.handleChange} name='password'/>
                     <br />
-                    <input type='file'/>
                 <input type="submit" value="Create Account"/>
             </form>
         )

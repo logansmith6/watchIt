@@ -1,6 +1,6 @@
-export const videosReducer = (state = [], action) => {
+export const postsReducer = (state = [], action) => {
     switch(action.type){
-        case 'FETCH_VIDEOS':
+        case 'FETCH_POSTS':
             return action.payload
         default: 
             return state
