@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { addPost } from '../actions/postsActions';
 import Dropzone from 'react-dropzone'
 
+
+
 class PostsForm extends Component {
 
     state = {
@@ -27,6 +29,8 @@ class PostsForm extends Component {
         this.props.addPost(this.state)
         
     }
+
+    
 
     
     render() {
@@ -54,6 +58,7 @@ class PostsForm extends Component {
                     
                 <input type="submit" value="Post Video"/>
             </form>
+                
             
         )
     }

@@ -3,8 +3,10 @@
 import React, { Component } from 'react';
 //connect will allow use of actions
 import { connect } from 'react-redux';
+
 import { fetchPosts } from '../actions/postsActions';
 import PostsForm from './PostsForm';
+
 
 class PostsContainer extends Component {
 
@@ -16,6 +18,7 @@ class PostsContainer extends Component {
         return (
             <div>
                 Posts Container
+                
                 <PostsForm />
             </div>
         );
