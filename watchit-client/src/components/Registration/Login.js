@@ -1,39 +1,13 @@
 import React, { useState } from 'react';
+import { useAuth0 } from '@auth0/auth0-react'
 import './Login.css'
 
 const Login = () => {
-    
+    const { loginWithRedirect } = useAuth0();
     return (
-        <div className='login'><h1 className="login-command">Login</h1>
-            <form className='login__form'>
-                <input 
-                type='name' 
-                placeholder='Name' 
-                value={name} 
-                onChange={(e) => setName(e.target.value)}
-                />
-                <br/>
-                <input 
-                type='email' 
-                placeholder='Email' 
-                value={email} 
-                onChange={(e) => setEmail(e.target.value)}
-                />
-                <br/>
-                <input 
-                type='password' 
-                placeholder='Password' 
-                value={password} 
-                onChange={(e) => setPassword(e.target.value)}
-                />
-                <input 
-                type="submit" 
-                value="Login"
-                className="submit__btn"
-                />
-                
-            </form>
-        </div>
+        <button className="submit__btn"onClick={ () => loginWithRedirect()}>
+            Login
+        </button>
     );
 };
 

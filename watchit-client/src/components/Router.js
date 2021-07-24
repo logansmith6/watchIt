@@ -3,17 +3,19 @@ import { Switch, Route } from 'react-router-dom';
 
 
 import Login from '../components/Registration/Login'
+import Logout from '../components/Registration/Logout'
 import HomePage from './HomePage'
-import PostsForm from './PostsForm'
+import PostsContainer from './PostsContainer'
 //import HomePage from '../components/HomePage'
 
 const Router = () => {
     return (
         <Switch>
             
-            <Route exact path='/posts' component={HomePage} />
+            <Route exact path='/posts' components={HomePage} />
+            <Route exact path='/login' component={Login} />
             
-            <Route exact path='/posts/new' component={PostsForm} />
+            <Route exact path='/posts/new' component={PostsContainer} />
              
             
         </Switch>
