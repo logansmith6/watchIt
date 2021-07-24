@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 const HomePage = ({posts}) => {
     return (
         <div>
-            {posts.map(post => <ul><li key={post.id}>{post.title} {post.description} <video width='640' height='264' src={post.video.to_s} controls></video> </li></ul>)}
+            {posts.map(post => <ul><li key={post.id}>{post.title} {post.description} <video width='640' height='264' src={post.video} controls></video> </li></ul>)}
         </div>
     )
 }

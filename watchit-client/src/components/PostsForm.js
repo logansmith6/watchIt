@@ -10,7 +10,7 @@ class PostsForm extends Component {
     state = {
         title: '',
         description: '',
-        video: null
+        video: ''
 
 
     }
@@ -28,7 +28,7 @@ class PostsForm extends Component {
 
     handleSubmit = event => {
         event.preventDefault()
-        
+        this.state.video = event.target.elements.video.value
         
         this.props.addPost(this.state)
         
@@ -49,14 +49,14 @@ class PostsForm extends Component {
                 <input type='text' value={this.state.description} onChange={this.handleChange} name='description'/>
                     <br />
                     <input
-                        value={this.state.video}
+                        
                         onChange={this.handleChange}
                         id='playback'
                         type="hidden"
                         role="uploadcare-uploader"
                         data-public-key="50a37a21db13d5dd4bd7"
-                        name="my_file_input" 
-                        
+                        name="video" 
+                        uuid={this.cdnUrl}
                         />
                     <br />
                     
