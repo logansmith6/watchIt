@@ -11,7 +11,7 @@ const Router = () => {
     return (
         <Switch>
             
-            <Route exact path='/posts' components={HomePage} />
+            <Route exact path='/' components={PostsContainer} />
             
             <Route exact path='/posts/new' component={PostsContainer} />
              

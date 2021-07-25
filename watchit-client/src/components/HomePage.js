@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import '../App.css';
 
-
 const HomePage = ({posts}) => {
     return (
         <div class="browse">
