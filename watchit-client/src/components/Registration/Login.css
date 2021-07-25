@@ -24,3 +24,9 @@
     color: rgb(52, 93, 141)
 }
 
+.spinner {
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    
+}

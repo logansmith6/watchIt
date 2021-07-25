@@ -26,7 +26,7 @@ class PostsForm extends Component {
 
     handleSubmit = event => {
         event.preventDefault()
-        this.state.video = event.target.elements.video.value
+        
         
         this.props.addPost(this.state)
         window.location.reload(true);
@@ -48,6 +48,7 @@ class PostsForm extends Component {
                     <br />
                     <input
                         
+                        value={this.state.video}
                         onChange={this.handleChange}
                         id='playback'
                         type="hidden"
