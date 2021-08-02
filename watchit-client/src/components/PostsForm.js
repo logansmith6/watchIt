@@ -24,9 +24,15 @@ class PostsForm extends Component {
         })
     }
 
+    handleUrl = event => {
+        event.preventDefault()
+        this.setState({
+            video:  event.target.elements.video.value
+        })
+    }
+
     handleSubmit = event => {
         event.preventDefault()
-        
         
         this.props.addPost(this.state)
         window.location.reload(true);
@@ -49,7 +55,7 @@ class PostsForm extends Component {
                     <input
                         
                         value={this.state.video}
-                        onChange={this.handleChange}
+                        onChange={this.handleUrl}
                         id='playback'
                         type="hidden"
                         role="uploadcare-uploader"

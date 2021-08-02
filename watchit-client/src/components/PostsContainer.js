@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 //connect will allow use of actions
 import { connect } from 'react-redux';
 
-import { fetchPosts } from '../actions/postsActions';
+import   { fetchPosts } from '../actions/postsActions';
 
 import HomePage from './HomePage'
 
