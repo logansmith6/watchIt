@@ -4,8 +4,8 @@ import { Switch, Route } from 'react-router-dom';
 
 
 
-import PostsContainer from './PostsContainer'
 
+import HomePage from './HomePage';
 import PostsForm from './PostsForm'
 
 const Router = () => {
@@ -13,7 +13,7 @@ const Router = () => {
         <Switch>
             
             
-            <Route exact path='/posts' components={PostsContainer} />
+            <Route exact path='/posts' component={HomePage} />
             <Route exact path='/posts/new' component={PostsForm} />
              
             

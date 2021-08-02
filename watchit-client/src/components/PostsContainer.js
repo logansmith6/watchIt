@@ -17,8 +17,7 @@ class PostsContainer extends Component {
     render() {
         return (
             <div>
-                Posts Container
-                <HomePage />
+                
             </div>
         );
     }
