@@ -4,7 +4,7 @@ import '../App.css';
 
 const HomePage = ({posts}) => {
     return (
-        <div class="browse">
+        <div class="gallery">
             
             {posts.map(post => 
                 <ul>

@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 
 import   { fetchPosts } from '../actions/postsActions';
 
-import HomePage from './HomePage'
+
 
 class PostsContainer extends Component {
 

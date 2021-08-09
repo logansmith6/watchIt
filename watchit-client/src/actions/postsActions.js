@@ -20,4 +20,6 @@ export const addPost = post => {
         .then(post => dispatch({ type: 'ADD_POST', payload: post}))
     }
 }
+
+
     

@@ -6,7 +6,8 @@ import { Switch, Route } from 'react-router-dom';
 
 
 import HomePage from './HomePage';
-import PostsForm from './PostsForm'
+import PostsForm from './PostsForm';
+import About from './About'
 
 const Router = () => {
     return (
@@ -15,7 +16,7 @@ const Router = () => {
             
             <Route exact path='/posts' component={HomePage} />
             <Route exact path='/posts/new' component={PostsForm} />
-             
+            <Route path='/about' component={About} />
             
         </Switch>
     )
