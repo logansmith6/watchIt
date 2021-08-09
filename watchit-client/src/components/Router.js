@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Redirect, Route } from 'react-router-dom';
 
 
 
@@ -13,7 +13,7 @@ const Router = () => {
     return (
         <Switch>
             
-            
+            <Redirect exact from="/" to="/posts" />
             <Route exact path='/posts' component={HomePage} />
             <Route exact path='/posts/new' component={PostsForm} />
             <Route path='/about' component={About} />

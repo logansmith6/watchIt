@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addPost } from '../actions/postsActions';
+
 import '../App.css';
 
 
@@ -10,7 +11,8 @@ class PostsForm extends Component {
     state = {
         title: '',
         description: '',
-        video: ''
+        video: '',
+        redirectToHome: false
     }
 
    
@@ -23,9 +25,9 @@ class PostsForm extends Component {
             [name]: value
         })
     }
-
+    //this, for some strange reason, does not work.
     //handleUrl = event => {
-    //    event.preventDefault()
+        //event.preventDefault()
     //    this.setState({
     //        video:  event.target.elements.video.value
     //    })
@@ -33,9 +35,11 @@ class PostsForm extends Component {
 
     handleSubmit = event => {
         event.preventDefault()
+        
         this.state.video = event.target.elements.video.value
         this.props.addPost(this.state)
-        window.location.reload(true);
+        window.location.replace('/posts');
+        
     }
 
     
