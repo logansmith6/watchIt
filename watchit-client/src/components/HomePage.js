@@ -11,7 +11,7 @@ const HomePage = ({posts}) => {
                     <a className="post-title" key={post.id}> 
                         <video width='320' height='180' src={post.video} controls></video>
                         <br/>
-                        {post.title} {post.description} 
+                        {post.title} - {post.description} 
                     </a>
                 </ul>)}
         </div>
